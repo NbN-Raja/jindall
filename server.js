@@ -51,12 +51,8 @@ process.on('SIGINT', () => {
     process.exit(0);
   });
 });
-const server =app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
-const io = socket(server, {
-  cors: {
-    origin: "http://localhost:5000",
-    credentials: true,
-  },
-});
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+
 
