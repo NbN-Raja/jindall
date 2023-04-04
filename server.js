@@ -10,7 +10,7 @@ const port = 5000;
 
 app.get('/', (req, res) => {
   // Get the value of the mycookie cookie
-  res.send('Welcome to UI/UX Sharing Application');
+  res.send('Ball Bhayo Mu g');
 });
 
 app.use(cors());
