@@ -6,9 +6,9 @@ const { body, validationResult } = require("express-validator");
 const { response } = require("express");
 var jwt = require("jsonwebtoken");
 const { jwtSecret,jwtSecretrefresh } = require("../auth/config");
-const { isObjectIdOrHexString, isValidObjectId } = require("mongoose");
-var geoip = require("geoip-lite");
-var ip = require("ip");
+
+
+
 require("../auth/roles");
 
 exports.get = (req, res) => {};

@@ -3,10 +3,8 @@ var bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 const cors = require('cors');
 const mongoose= require("mongoose")
-const socket = require("socket.io");
 
 
-const mysql = require('mysql');
 const app = express();
 const port = 5000;
 
@@ -44,13 +42,7 @@ require("./app/routes/message.routes.js")(app)
 
 
 
-// Close the connection when the Node.js application is terminated
-process.on('SIGINT', () => {
-  connection.end(() => {
-    console.log('Connection to database closed.');
-    process.exit(0);
-  });
-});
+
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
