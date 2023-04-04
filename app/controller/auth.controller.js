@@ -11,7 +11,10 @@ const { jwtSecret,jwtSecretrefresh } = require("../auth/config");
 
 require("../auth/roles");
 
-exports.get = (req, res) => {};
+exports.get = (req, res) => {
+
+  res.status(200).send({ message:"Hello from node js my name is jindal Steel!! Nice to Meet You"})
+};
 
 exports.login = async (req, res,next) => {
   try {
